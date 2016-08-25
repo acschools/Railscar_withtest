@@ -1,0 +1,32 @@
+<h1>Simulated Car</h1>
+<br>
+Make : <%= @car.make %>
+<br>
+Year : <%= @car.year %>
+<br>
+Speed : <%= @car.speed %>Km/h
+<br>
+Lights : <%= @car.lights %>
+<br>
+Parking Brake : <%= @car.parking_brake %>
+<br>
+<form method="get" action="/cars/accelerate">
+<input type="submit" value="Accelerate" />
+</form>
+<form method="get" action="/cars/brake">
+<input type="submit" value="Brake"/>
+</form>
+<br>
+<form method="get" action="/cars/lights_switch">
+<input type="submit" value="Light Switch"/>
+</form>
+<br>
+<form method="get" action="/cars/parking_brake">
+  Set
+  <%= radio_button_tag 'parking_brake','set'%>
+  <br>
+  Release
+  <%= radio_button_tag 'parking_brake','release'%>
+  <br>
+  <input type="submit" value="Update Parking Brake"/>
+</form>
